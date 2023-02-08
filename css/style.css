@@ -1,0 +1,765 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;&display=swap'); */
+
+/* * {
+    font-family: 'Poppins', sans-serif;
+  } */
+  
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: url("poppins400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    src: url("poppins500.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    src: url("poppins600.woff2") format("woff2");
+    font-display: swap;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+    font-family: poppins, sans-serif;
+    /* transition: background 1s ease; */
+    /* -webkit-text-size-adjust: none; */
+    touch-action: manipulation;
+}
+
+body {
+    background: #ADD8E6;
+    overflow: hidden;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -webkit-background-clip: padding-box;
+}
+
+@media screen and (max-width: 400px) {
+
+    html,
+    body {
+        overflow-x: hidden !important;
+        font-size: 54%;
+        top: 0;
+        left: 0;
+    }
+}
+
+*:focus {
+    outline: none;
+}
+
+*::-ms-clear {
+    display: none;
+}
+
+ul {
+    width: 100%;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+ul:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+li {
+    display: block;
+    float: left;
+    position: relative;
+}
+
+.li25 {
+    width: 25%;
+}
+
+.li75 {
+    width: 75%;
+}
+
+.li100 {
+    width: 100%;
+}
+
+
+.color {
+    color: #0773e8;
+}
+
+.color_dots {
+    background-color: #0773e8;
+}
+
+/* 
+input[type="checkbox"]:not(:checked)+label:hover,
+input[type="checkbox"]:not(:checked)+label:hover:after {
+    border-color: black !important;
+    color: black;
+}
+
+input[type="checkbox"]:not(:checked):disabled+label:hover,
+input[type="checkbox"]:not(:checked):disabled+label:hover:after {
+    border-color: grey !important;
+    color: grey;
+}
+
+#edit {
+    display: none;
+    opacity: 0;
+    transition: opacity .3s ease;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+} */
+
+#wrapper {
+    padding: 3rem;
+    width: calc(119.0551181102rem + 6rem);
+    margin: 0 auto;
+    position: relative;
+    transition-delay: 1s;
+}
+
+#wrapper {
+    transition: opacity 5s ease;
+}
+
+#layout {
+    min-height: 168.3779527559rem;
+    width: 119.0551181102rem;
+    background: white;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.3) 0.4rem 0.7rem 9.3rem 0.3rem;
+    overflow: hidden;
+    /* font-size: 0 auto; */
+}
+
+#layout * {
+    -webkit-transition-delay: .2s;
+    -moz-transition-delay: .2s;
+    -ms-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
+}
+
+#contlayout {
+    padding: 9.4488188976rem;
+    padding: 7.5590551181rem;
+    min-height: 168.3779527559rem;
+    display: inline-block;
+    width: 100%;
+    opacity: 0;
+    transition: .5s opacity ease, .5s transform ease;
+    transition-delay: .5s;
+    transform-origin: top;
+    font-family: "poppins";
+}
+
+.sortable {
+    /* list-style-type: none; */
+    z-index: 99999999;
+    position: relative;
+}
+
+.sortable .frame {
+    padding: .5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    position: relative;
+    outline: 2px dashed transparent;
+    outline-offset: -4px;
+    transform: scale(1);
+    transition: outline .3s, transform 0.2s ease;
+    padding-right: .5rem !important;
+}
+
+/* .sortable .frame:hover {
+    outline: 2px dashed lightgrey !important;
+    transition-delay: 0s !important;
+    overflow: visible !important;
+}
+
+.sortable:active .frame {
+    outline: 2px dashed lightgrey;
+    transition-delay: .2s !important;
+    overflow: hidden;
+} */
+
+
+.workExperience :last-child .timeline_line {
+    display: none;
+}
+
+.education :last-child .timeline_line {
+    display: none;
+}
+
+.timeline_dot {
+    width: 1rem;
+    height: 1rem;
+    background: #0773e8;
+    border-radius: 3rem;
+    position: absolute;
+    z-index: 1;
+    left: -1.75rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: center;
+}
+
+.timeline_dot_border {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background: #ea2121;
+    display: block;
+    top: -.5rem;
+    left: -.5rem;
+    position: absolute;
+    text-align: center;
+    border-radius: 2rem;
+    border: 0.5rem solid white;
+    background: transparent;
+}
+
+.timeline_line {
+    position: absolute;
+    height: 100%;
+    width: .3rem;
+    background: #000000;
+    left: 2.1rem;
+    top: 2.5rem;
+    opacity: .2;
+}
+
+#circularBlock .frame {
+    padding: 2.2rem;
+}
+
+.multiBlocks {
+    width: 100%
+}
+
+.multiBlocks .frame {
+    display: inline-block;
+    padding: 0.5rem;
+    position: relative;
+    padding: 0;
+    padding-right: 1rem !important;
+}
+
+/* [contenteditable=true]:empty:before {
+    content: attr(placeholder);
+    display: block;
+    color: grey;
+}
+
+[contenteditable=true] {
+    cursor: text;
+    text-align: left;
+    transition-delay: 0s !important;
+    transition: .1s background linear;
+    -webkit-user-select: text;
+    user-select: text;
+}*/
+
+[contenteditable=true]:focus {
+    background: rgba(128, 128, 128, 0.2);
+    border-radius: .5rem;
+}
+
+.nowrap {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*
+.contact_item div {
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    float: left;
+    margin-right: 2rem;
+    left: .5rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: center;
+    overflow: hidden;
+    border-radius: 99px;
+    background-image: url(../img/contact_icons.png) !important;
+    background-size: 16rem 2rem;
+} */
+
+.contact_title{
+    padding-bottom: 2rem;
+}
+
+.contact_item {
+    display: block;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    position: relative;
+    border-radius: 2rem;
+}
+
+.contact_item .icon-container {
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    float: left;
+    margin-right: 2rem;
+    left: .5rem;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: center;
+    overflow: hidden;
+    border-radius: 99px;
+}
+
+.icon-container i {
+    display: inline-block;
+    line-height: 2rem;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+  }
+
+
+.contact_item .text {
+    margin-left: 3rem !important;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -ms-fit-content;
+}
+
+.link{
+    text-decoration:none;
+    background-color: none;
+    color:#242424;
+}
+
+/* #mail .text,
+#linkedin .text,
+#website .text{
+    border-bottom: .1rem solid rgb(34, 34, 34);
+    border-radius: 0.5rem 0.5rem 0 0;
+} */
+#mail .text:hover,
+#linkedin .text:hover,
+#skype .text:hover,
+#github .text:hover,
+#website .text:hover{
+    color: grey;
+}
+
+
+#centered_name {
+    padding-left: 4rem;
+    text-align: left;
+}
+
+#name_cont span {
+    width: 50%;
+    padding-bottom: 33.333%;
+    display: block;
+}
+
+.workExperience .frame {
+    padding-left: 3.5rem;
+}
+
+.li75 {
+    padding-left: 4rem;
+}
+
+#workExperience{
+    margin-bottom: -1rem;
+}
+#education table,
+#certificates table {
+    padding-bottom: .5rem;
+}
+#education .title3,
+#certificates .title3{
+    position: relative;
+    margin: 0%;
+    padding-bottom: .1rem;
+    display: flex;
+    align-items: left;
+}
+#education .date,
+#certificates .date,
+#education .location {
+    position: relative;
+    float: left;
+    margin: 0%;
+    font-size: 1.3rem;
+    color: rgb(80, 80, 80);
+    text-align: left;
+    line-height: 1.5rem;
+    right: 0;
+    padding-top: .1rem;
+    padding-bottom: .1rem;
+    display: flex;
+    align-items: left;
+}
+#education td i,
+#certificates td i {
+    display: grid;
+    text-align: center;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    margin-right: 5px;
+    color: rgb(80, 80, 80);
+    justify-content: center;
+  }
+
+
+.name {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.1;
+    padding: .5rem;
+    margin: 0;
+    margin-bottom: -3rem;
+}
+
+.title1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: .5rem;
+    line-height: 1.25;
+    margin: 0;
+    margin-top: 2.5rem;
+    position: relative;
+    z-index: 10;
+    display: block;
+    width: 100%;
+}
+
+.title2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.16;
+    padding: .5rem;
+    margin: 0;
+    display: block !important;
+    clear: both;
+}
+
+.title3 {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    padding: .5rem;
+    margin: 0;
+}
+
+#intereses .title3,
+#language .title3 {
+    line-height: 1.16;
+}
+
+.text {
+    font-size: 1.4rem;
+    line-height: 1.16;
+    font-weight: 400;
+    padding: .5rem;
+    margin: 0;
+}
+
+.date {
+    position: relative;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: .5rem;
+    display: inline-block;
+    margin: 0;
+    margin-top: -.5rem;
+    margin-left: .5rem;
+    min-width: fit-content;
+    display: inline-block;
+    float: right;
+    position: absolute;
+    right: .5rem;
+}
+
+.location {
+    position: relative;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+    padding: .5rem;
+    display: inline-block;
+    margin: 0;
+    margin-top: -.5rem;
+    margin-left: .5rem;
+    min-width: fit-content;
+    display: inline-block;
+    float: right;
+    position: absolute;
+    right: .5rem;
+}
+
+#personal_information .title2 {
+    margin-top: .5rem;
+}
+
+#personal_information .title3,
+#workExperience .title3 {
+    margin-top: -.4rem
+}
+
+.li75 .title1,
+#name {
+    margin-left: 1.5rem;
+    width: calc(100% - 1.5rem);
+}
+
+#title {
+    margin-top: 1.5rem;
+}
+
+#profile .text {
+    margin-top: -.5rem;
+    /* text-align: justify; */
+    text-align: left;
+    color: #242424;
+    width: 98%;
+    line-height: 1.3;
+}
+
+#profile .title1 {
+    display: block !important;
+}
+
+
+#workExperience .title3 {
+    width: fit-content;
+    display: inline-block;
+    max-width: 100%;
+    text-transform: uppercase;
+}
+
+#circularBlock .title3 {
+    width: calc(80% - -.5rem);
+    margin-left: calc(15% + 1rem);
+    font-weight: 400;
+}
+
+#skills .title3 {
+    width: 100%;
+    width: calc(50% - 1rem);
+    margin-left: calc(50% + 1rem);
+    font-weight: 400;
+}
+
+#simple_list1 .title3,
+#simple_list2 .title3 {
+    width: auto;
+    margin-left: 0;
+    font-weight: 400;
+    background: whitesmoke;
+    border-radius: 0.5rem;
+    min-width: 5rem;
+    padding: 0.5rem 1rem;
+    min-width: 10rem;
+    line-height: 1.6;
+}
+
+.workExperience .text {
+    margin-top: -.5rem !important;
+    text-align: left;
+    width: 100% !important;
+    line-height: 1.3;
+    font-weight: 400;
+    padding: .5rem;
+    text-transform: none !important;
+    display: inline-block;
+    color: #242424;
+    white-space: normal !important;
+    word-break: normal !important;
+}
+
+#personal_information .title3 {
+    max-width: 100%;
+    width: fit-content;
+    font-weight: 400;
+    line-height: 1.16;
+}
+
+#skills_large1 #circularBlock .frame,
+#skills_small1 #skills1.frame,
+#language div,
+#intereses div {
+    display: inline-table;
+    padding: 0;
+    padding-right: 1rem !important;
+}
+
+#language,
+#intereses1 {
+    position: relative;
+}
+
+#skills_large1 #circularBlock .title3,
+#skills_small1 #skills1 .title3,
+#simple_list1 .title3,
+#simple_list2 .title3 {
+    width: 100%;
+    margin-left: 0;
+    font-weight: 400;
+    background: whitesmoke;
+    border-radius: .5rem;
+    min-width: 5rem;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+}
+
+#simple_list1 .title3,
+#simple_list2 .title3 {
+    width: auto;
+}
+
+#skills_large1 #circularBlock .title3:focus,
+#skills_small1 #skills1 .title3:focus,
+#simple_list1 .title3:focus,
+#simple_list2 .title3:focus {
+    background: rgba(128, 128, 128, 0.2);
+}
+
+#skills_large1 #circularBlock,
+#skills_small1 #skills,
+#language,
+#intereses {
+    padding-left: .5rem;
+}
+
+#skills_large1 #circularBlock .title3:empty,
+#skills_small1 #skills1 .title3:empty,
+#simple_list1 .title3:empty,
+#simple_list2 .title3:empty {
+    min-width: 10rem
+}
+
+#skills_large1 .sortable .frame,
+#skills_small1 .sortable .frame,
+#simple_list1 .frame,
+#simple_list2 .frame {
+    outline: none !important;
+}
+
+.skill {
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    margin-top: .5rem;
+
+  }
+
+#profile {
+    margin-top: 2.5rem;
+    transition: outline .3s, transform 0.2s ease;
+}
+
+#profile .title1 {
+    margin-top: 0;
+}
+
+#layout p {
+    display: inline-block;
+    white-space: pre-wrap;
+}
+
+#skills_large1 .title1,
+#skills_small1 .title1,
+#simple_list2 .title1,
+#simple_list1 .title1,
+#projects .title1{
+    margin-top: 0;
+    margin-left: 1rem;
+    width: calc(100% - 1rem);
+}
+
+.bullets p {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+#simple_list2,
+#simple_list1 {
+    transition: outline .3s;
+    transition-delay: .2s !important;
+}
+
+#secondaryBlock {
+    padding: .5rem;
+}
+
+#language div {
+    display: inline-table;
+}
+
+#simple_list2,
+#simple_list1 {
+    outline: 0.2rem dashed transparent !important;
+    outline-offset: 0.1rem;
+}
+
+input[type="checkbox"]:not(:checked)+label {
+    border-color: grey !important
+}

@@ -1,0 +1,14 @@
+body, #wrapper, #layout {
+    /* display: none; */
+    /* visibility:hidden; */
+    /* background-color: #fff !important; */
+    margin: 0;
+    padding: 0;
+  }
+
+#layout {
+/* display: block; */
+/* visibility:visible; */
+    position: absolute;
+    box-shadow: none;
+}

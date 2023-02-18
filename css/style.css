@@ -1,13 +1,15 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap'); */
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-/* * {
+
+* {
     font-family: 'Poppins', sans-serif;
-  } */
+  }
   
 
-@font-face {
+/* @font-face {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
@@ -29,7 +31,7 @@
     font-weight: 600;
     src: url("poppins600.woff2") format("woff2");
     font-display: swap;
-}
+} */
 
 body,
 html {
@@ -70,6 +72,15 @@ body {
         left: 0;
     }
 }
+
+/* @media print {
+    body {
+      -webkit-print-color-adjust: exact !important;
+      color-adjust: exact !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+  } */
 
 *:focus {
     outline: none;
@@ -281,7 +292,7 @@ input[type="checkbox"]:not(:checked):disabled+label:hover:after {
     padding: 0.5rem;
     position: relative;
     padding: 0;
-    padding-right: 1rem !important;
+    padding-right: 0.5rem !important;
 }
 
 /* [contenteditable=true]:empty:before {

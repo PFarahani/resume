@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Peyman Farahani | Resume</title>
+    <meta name="viewport" id="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <div id="generate-pdf" class="download-button" onclick="generatePDF()" title="Download PDF">
+        <i class="fas fa-download"></i>
+    </div>
+    <label id="halfbold-toggle" class="switch" title="Toggle HalfBold">
+        <input type="checkbox" id="toggle" onchange="toggleHalfBold()">
+        <span class="slider round"></span>
+    </label>    
+
+
+    <div class="layout">
+            <ul>
+                <li class="li75" id="profile">
+                    <div class="name-title-section">
+                        <p class="name color">Peyman Farahani</p>
+                        <p class="profession">Data Scientist</p>
+                    </div>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="li25" id="personal-information">
+
+                    <section id="summary">
+                        <h1>Summary</h1>
+                        <p class="text">High performing data scientist with a passion for business analytics and a
+                            strong background in machine learning and programming with Python. Possess a track
+                            record of delivering positive outcomes for organizations through the application of
+                            data-driven solutions.<br>Skilled in collaborating with cross-functional teams to solve
+                            complex, high-stakes problems. Committed to continuous improvement and always striving
+                            to contribute to team success.</p>
+                    </section>
+
+                    <section id="personal-details">
+                        <h1>Personal Details</h1>
+                        <div class="detail-item">
+                            <h2 class="color">Location</h2>
+                            <p>Toronto, ON</p>
+                        </div>
+                    </section>
+
+                    <section id="contact">
+                        <h1>Contact</h1>
+                        <div class="grid-container">
+                            <div class="grid-item">
+                                <span class="fa-stack fa-1x">
+                                    <i class="fa fa-circle fa-stack-1x color"></i>
+                                    <i class="fa-solid fa-mobile-screen-button fa-stack-1x color-w"></i>
+                                </span>
+                                <!-- <div class="icon-container"><i class="fa-solid fa-mobile-screen-button"></i></div> -->
+                            </div>
+                            <div class="grid-item">
+                                <a class="nowrap">+98 939 177 4443</a>
+                            </div>
+                            <div class="grid-item">
+                                <span class="fa-stack fa-1x">
+                                    <i class="fa fa-circle fa-stack-1x color"></i>
+                                    <i class="fa fa-envelope fa-stack-1x color-w"></i>
+                                </span>
+                                <!-- <div class="icon-container"><i class="fa fa-envelope" aria-hidden="true"></i></div> -->
+                            </div>
+                            <div class="grid-item">
+                                <a class="nowrap" href="mailto:peymanffarahani@gmail.com">
+                                    <font color="#242424">peymanffarahani@gmail.com</font>
+                                </a>
+                            </div>
+                            <div class="grid-item">
+                                <span class="fa-stack fa-1x">
+                                    <i class="fa fa-circle fa-stack-1x color"></i>
+                                    <i class="fa-brands fa-chrome fa-stack-1x color-w"></i>
+                                </span>
+                                <!-- <div class="icon-container"><i class="fa-brands fa-chrome"></i></div> -->
+                            </div>
+                            <div class="grid-item">
+                                <a class="nowrap" href="https://pfarahani.github.io/">
+                                    <font color="#242424">pfarahani.github.io</font>
+                                </a>
+                            </div>
+                            <div class="grid-item">
+                                <span class="fa-stack fa-1x">
+                                    <i class="fa fa-circle fa-stack-1x color"></i>
+                                    <i class="fa-brands fa-linkedin-in fa-stack-1x color-w"></i>
+                                </span>
+                                <!-- <div class="icon-container"><i class="fa-brands fa-linkedin-in"></i></div> -->
+                            </div>
+                            <div class="grid-item">
+                                <a class="nowrap" href="https://linkedin.com/in/peymanfarahani">
+                                    <font color="#242424">peymanfarahani</font>
+                                </a>
+                            </div>
+                            <div class="grid-item">
+                                <span class="fa-stack fa-1x">
+                                    <i class="fa fa-circle fa-stack-1x color"></i>
+                                    <i class="fa-brands fa-skype fa-stack-1x color-w"></i>
+                                </span>
+                                <!-- <div class="icon-container"><i class="fa-brands fa-skype"></i></div> -->
+                            </div>
+                            <div class="grid-item">
+                                <a class="nowrap" href="https://join.skype.com/invite/cUQZUVokg8PI">
+                                    <font color="#242424">live:payman_fara</font>
+                                </a>
+                            </div>
+                            <div class="grid-item">
+                                <span class="fa-stack fa-1x">
+                                    <i class="fa fa-circle fa-stack-1x color"></i>
+                                    <i class="fa-brands fa-github fa-stack-1x color-w"></i>
+                                </span>
+                                <!-- <div class="icon-container"><i class="fa-brands fa-github"></i></div> -->
+                            </div>
+                            <div class="grid-item">
+                                <a class="nowrap" href="https://github.com/PFarahani">
+                                    <font color="#242424">PFarahani</font>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="certificates">
+                        <h1>Certificates</h1>
+                        <div class="certificates-container">
+                            <div class="certificate">
+                                <h3 class="certificate-title">Machine Learning Specialization</h3>
+                                <p class="certificate-details">University of Washington</p>
+                                <p class="certificate-date color">Oct 2022</p>
+                            </div>
+
+                            <div class="certificate">
+                                <h3 class="certificate-title">Deep Learning Specialization</h3>
+                                <p class="certificate-details">DeepLearning.AI</p>
+                                <p class="certificate-date color">Aug 2022</p>
+                            </div>
+
+                            <div class="certificate">
+                                <h3 class="certificate-title">The Complete Python 3 Course</h3>
+                                <p class="certificate-details">Udemy</p>
+                                <p class="certificate-date color">May 2020</p>
+                            </div>
+
+                            <div class="certificate">
+                                <h3 class="certificate-title">Python Programming with Data Science Approach</h3>
+                                <p class="certificate-details">K. N. Toosi University of Technology</p>
+                                <p class="certificate-date color">Dec 2019</p>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section id="languages">
+                        <h1>Languages</h1>
+                        <div class="block-container" id="language-list">
+                            <div class="frame">
+                                <h3>English</h3>
+                            </div>
+                            <div class="frame">
+                                <h3>German</h3>
+                            </div>
+                            <div class="frame">
+                                <h3>Persian</h3>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="hobbies">
+                        <h1>Hobbies</h1>
+                        <div class="block-container" id="hobbies-list">
+                            <div class="frame">
+                                <h3>Santoor</h3>
+                            </div>
+                            <div class="frame">
+                                <h3>Skiing</h3>
+                            </div>
+                            <div class="frame">
+                                <h3>Movies</h3>
+                            </div>
+                            <div class="frame">
+                                <h3>Swimming</h3>
+                            </div>
+                            <div class="frame">
+                                <h3>Gaming</h3>
+                            </div>
+                        </div>
+                    </section>
+
+                </li>
+
+                <li class="li75" id="resume">
+                    <div id="main-block">
+
+                        <section id="experience">
+                            <h1>Work Experience</h1>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-line"></div>
+                                    <h2 class="title color">Data Analyst & Business Intelligence Developer</h2>
+                                    <div class="info">
+                                        <h3 class="uppercase-bold"><i
+                                                class="fa-solid fa-location-dot color margin-right"></i>SnappTrip
+                                        </h3>
+                                        <h3><i class="fas fa-calendar-alt color margin-right"></i>Aug 2022 - <span
+                                                class="tag">Present</span></h3>
+                                    </div>
+                                    <div class="text">
+                                        <div class="experience-details">
+                                            <ul>
+                                                <li>Designed and executed 99% accurate data queries, reducing query
+                                                    time by 70%, utilizing Metabase and technical expertise in
+                                                    database development and analysis.</li>
+                                                <li>Analyzed market share, driving 20% more informed business
+                                                    decisions through data interpretation and analysis.</li>
+                                                <li>Prepared and analyzed QC reports and flight data, improving
+                                                    decision-making by 30% through data scraping and analysis.</li>
+                                                <li>Conducted data scraping and API reverse engineering, resulting
+                                                    in a 10% increase in revenue and a 42% boost in monthly revenue
+                                                    through the use of data crawler scripts created with Python.
+                                                </li>
+                                                <li>Streamlined analysis tasks through automation, resulting in a
+                                                    noticeable reduction in time spent and increase in productivity.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="key-projects">
+                                            <h3 class="uppercase-bold">Key Projects</h3>
+                                            <ul>
+                                                <li>Developed "Cron Task Scheduler" to optimize task scheduling and
+                                                    eliminate overlapping, resulting in improved efficiency within a
+                                                    specified time interval. <a class="link"
+                                                        href="https://github.com/PFarahani/cron-task-scheduler.git"><u>Link</u></a>
+                                                </li>
+                                                <li>Designed and implemented "Flight Data Crawler" scripts to gather
+                                                    competitor flight data, resulting in valuable insights and
+                                                    improved understanding of flight pricing trends.</li>
+                                                <li>Developed "Hotel Guarantee Code Checker", a script automating
+                                                    the manual comparison process between myhotel.snapptrip.com and
+                                                    admin.snapptrip.com to verify guarantee codes within a specified
+                                                    date range and report discrepancies as a .csv file.</li>
+                                                <li>Developed a program, "Free RoomNight Lookup", to automate the
+                                                    manual process of extracting and comparing booking information
+                                                    by accepting a hotel booking code, scraping relevant data from
+                                                    admin.snapptrip.com, and outputting details as a .csv file.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-line"></div>
+                                    <h2 class="title color">Data Scientist & Business Process Analyst</h2>
+                                    <div class="info">
+                                        <h3 class="uppercase-bold"><i
+                                                class="fa-solid fa-location-dot color margin-right"></i>SAIPA</h3>
+                                        <h3><i class="fas fa-calendar-alt color margin-right"></i>Aug 2020 - Apr
+                                            2021</h3>
+                                    </div>
+                                    <div class="text">
+                                        <div class="experience-details">
+                                            <ul>
+                                                <li>Corrected and designed system processes, improving efficiency
+                                                    and accuracy by using BPMN 2.0 tools and Visual Paradigm
+                                                    software.</li>
+                                                <li>Updated and corrected regulations and executive methods for the
+                                                    QC department, enhancing compliance through thorough analysis
+                                                    and implementation.</li>
+                                                <li>Prepared performance reports and management dashboards for the
+                                                    systems engineering department of SAIPA Group, boosting informed
+                                                    decision-making by 25% through data analysis and dashboard
+                                                    creation.</li>
+                                                <li>Analyzed data, driving a 30% increase in organizational insights
+                                                    through in-depth examination and interpretation.</li>
+                                                <li>Mined data, providing a 20% boost in organizational insight
+                                                    through technical skills in data extraction and manipulation.
+                                                </li>
+                                                <li>Designed dashboards using Microsoft Power BI, improving data
+                                                    visualization and accessibility by 40% through technical skills
+                                                    in dashboard creation and data analysis.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="key-projects">
+                                            <h3 class="uppercase-bold">Key Projects</h3>
+                                            <ul>
+                                                <li>Implemented Vehicle Specification Clustering utilizing k-means
+                                                    algorithm and PCA analysis to segment cars' specifications in
+                                                    Iran's market, resulting in actionable insights from data
+                                                    provided by Center of Strategic Studies of SAIPA.</li>
+                                                <li>Developed "SAIPA Financial Dashboard" to provide an in-depth
+                                                    view of the company's financial information between 2015 and
+                                                    2020. Collected and analyzed financial statements from the
+                                                    finance department, presenting insights to senior management
+                                                    during a meeting.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="education">
+                            <h1>Education</h1>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-line"></div>
+                                    <h2 class="title color">B.Sc. Industrial Engineering</h2>
+                                    <div class="info">
+                                        <h3 class="uppercase-bold"><i
+                                                class="fa-solid fa-graduation-cap color margin-right"></i>Amirkabir
+                                            University of Technology <span style="font-size: 0.7em;">(Tehran
+                                                Polytechnic)<span></h3>
+                                        <h3><i class="fas fa-calendar-alt color margin-right"></i>Sep 2017 - Feb
+                                            2022</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <div id="secondary-block">
+
+                        <section id="skills">
+                            <h1>Skills</h1>
+                            <div class="grid-container" id="skills-list">
+                                <h3 class="skill-section-title bold">Industry<br>Knowledge</h3>
+                                <div class="block-container">
+                                    <div class="frame">
+                                        <h3>Machine Learning</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Deep Learning</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Web Scraping</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Business Analysis</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Version Control (Git)</h3>
+                                    </div>
+                                </div>
+                                <h3 class="skill-section-title bold">Programming</h3>
+                                <div class="block-container">
+                                    <div class="frame">
+                                        <h3>Python</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>SQL</h3>
+                                    </div>
+                                </div>
+                                <h3 class="skill-section-title bold">Python<br>Library</h3>
+                                <div class="block-container">
+                                    <div class="frame">
+                                        <h3>Pandas</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>NumPy</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Matplotlib</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Seaborn</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Plotly</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Scikit‑learn</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>TensorFlow</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Spacy</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Scrapy</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Selenium</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Requests</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Asyncio</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Aiohttp</h3>
+                                    </div>
+                                </div>
+                                <h3 class="skill-section-title bold">Software</h3>
+                                <div class="block-container">
+                                    <div class="frame">
+                                        <h3>Weka</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>SPSS Modeler</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>SPSS</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>MS Access</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Excel</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>PowerBI</h3>
+                                    </div>
+                                    <div class="frame">
+                                        <h3>Tableau</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                </li>
+            </ul>
+    </div>
+
+</body>
+
+</html>

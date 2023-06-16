@@ -1,0 +1,601 @@
+:root {
+    --base-color: #0773e8;
+}
+
+
+/* || FONT DEFINITIONS*/
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* || @media RULES */
+
+@media screen and (max-width: 480px) {
+    /* CSS for small width screens */
+    .layout {
+        width: auto !important;
+        padding: 2rem 1.5rem !important;
+    }
+
+    .name,
+    .profession {
+        text-align: center;
+    }
+
+    #personal-information {
+        width: 100%;
+    }
+
+    #resume {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    /* CSS for medium width screens */
+    .layout {
+        width: auto !important;
+        padding: 2rem 1.5rem !important;
+    }
+
+    .name,
+    .profession {
+        text-align: center;
+    }
+
+    #personal-information {
+        width: 100%;
+    }
+
+    #resume {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    /* CSS for wide screens */
+    .layout {
+        width: auto !important;
+        padding: 2rem 1.5rem !important;
+    }
+}
+
+@media print {
+    body,
+    html {
+        background-color: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        font-size: 40% !important;
+    }
+
+    .layout {
+        background-color: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: fit-content !important;
+        min-height: auto !important;
+        box-shadow: none !important;
+    }
+
+    #generate-pdf,
+    #halfbold-toggle {
+        display: none;
+    }
+
+    .certificates-container {
+        height: auto;
+        overflow: visible; /* Ensure overflow is visible for printing */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .certificate:nth-child(n+5) {
+        display: none;
+    }
+
+    .certificates-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    @page {
+        margin: 1cm;
+        size: A4 portrait;
+    }
+}
+
+
+/* || GENERAL STYLES */
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+    -webkit-text-size-adjust: none;
+    touch-action: manipulation;
+}
+
+body {
+    background: #add8e6;
+    overflow: hidden;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -webkit-background-clip: padding-box;
+}
+
+section {
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}    
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 2.5;
+    position: relative;
+    z-index: 10;
+    display: block;
+    width: 100%;
+}    
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0;
+}    
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.16;
+    margin: 0;
+}    
+
+p {
+    font-size: 1.35rem;
+    line-height: 1.16;
+    font-weight: 400;
+    margin: 0;
+}    
+
+ul {
+    width: 100%;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+ul:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+li {
+    display: block;
+    float: left;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #242424;
+}
+
+font:hover {
+    color: gray;
+}
+
+i.fa-circle {
+    font-size: 2rem;
+}
+
+
+/* || STYLE DEFINITIONS */
+
+.li25 {
+    width: 25%;
+    margin-top: 2.5rem;
+}
+
+.li75 {
+    width: 75%;
+    margin-top: 2.5rem;
+    padding-left: 4rem;
+}
+
+.li100 {
+    width: 100%;
+}
+
+.download-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    opacity: 0.7;
+}
+
+.download-button i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.layout {
+    min-height: 168rem;
+    width: 119rem;
+    background: white;
+    margin: 0 auto;
+    box-shadow: 0.4rem 0.7rem 9.3rem 0.3rem rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 7.55rem;
+    transform-origin: top;
+    font-family: "poppins";
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#profile {
+    padding-left: 0px;
+    width: 100%;
+}
+
+.name-title-section {
+    margin-top: -2.5rem;
+}
+
+.name {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 0.5rem;
+    margin: 0;
+    margin-bottom: -2rem;
+    white-space: pre-wrap;
+    padding-left: 0.24rem;
+}
+
+.profession {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+#summary .text {
+    text-align: left;
+    color: #242424;
+    width: 98%;
+    line-height: 1.2;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    gap: 0.7rem;
+    justify-content: start;
+    align-items: center;
+    padding-left: 0.2rem;
+}
+
+#skills .grid-container {
+    align-items: start;
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: rgb(80, 80, 80);
+    line-height: 1.4;
+}
+
+.grid-item i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-stack {
+    width: 2rem;
+}
+
+.certificates-container {
+    height: calc(4 * (5.5rem));
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.certificate {
+    padding-bottom: 1rem;
+    scroll-snap-align: start;
+}
+
+.certificate-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.4;
+    padding: 0.5rem 0;
+}
+
+.certificate-details {
+    color: #777;
+}
+
+.certificate-details,
+.certificate-date {
+    display: inline-block;
+    font-size: 1rem;
+    padding-right: 0.5rem;
+}
+
+.certificate-date {
+    font-weight: bold;
+}
+
+.block-container {
+    width: 100%;
+}
+
+.block-container .frame {
+    display: inline-block;
+    padding: 0.2rem 0.5rem 0.2rem 0.2rem;
+
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+.block-container h3 {
+    line-height: 1.16;
+    font-weight: 400;
+    background: whitesmoke;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.7rem;
+}
+
+.block-container h3:focus {
+    background: rgba(128, 128, 128, 0.2);
+}
+
+.title {
+    padding-left: 2rem;
+}
+
+.info {
+    padding: 0.5rem 0 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 0.4rem;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        left: 0.455rem;
+        top: 1rem;
+        background-color: var(--base-color);
+        outline: 0.5rem solid white;
+        border-radius: 50%;
+        z-index: 1;
+    }
+}
+
+.experience-details,
+.key-projects {
+    padding-top: 0.5rem;
+    padding-left: 3.75rem;
+}
+
+.key-projects h3 {
+    margin-left: -0.5rem;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+    height: 100%;
+    width: 0.3rem;
+    background: #000000;
+    left: 0.8rem;
+    top: 1.5rem;
+    opacity: 0.2;
+}
+
+.timeline :last-child .timeline-line {
+    display: none;
+}
+
+.text ul {
+    margin-top: 0.1rem;
+    padding-bottom: 0.5rem;
+    list-style-type: disc;
+}
+
+.text ul li {
+    padding-bottom: 0.5rem;
+    display: list-item;
+}
+
+.link {
+    font-size: 0.8em;
+    color: var(--base-color);
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.text {
+    font-size: 1.35rem;
+    line-height: 1.16;
+    font-weight: 400;
+    margin: 0;
+}
+
+.skill-section-title {
+    text-align: right;
+    color: darkgray;
+}
+
+
+/* || UTILITIES */
+
+.color {
+    color: var(--base-color);
+}
+
+.color-w {
+    color: white;
+}
+
+.nowrap {
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.margin-right {
+    margin-right: 0.7rem;
+}
+
+.uppercase-bold {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.tag {
+    background-color: var(--base-color);
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+}
+
+
+
+/* || SLIDER */
+
+/* The switch - the box around the slider */
+.switch {
+    position: fixed;
+    display: inline-block;
+    z-index: 9999;
+    width: 60px;
+    height: 34px;
+    bottom: 70px;
+    right: 20px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--base-color);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--base-color);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }

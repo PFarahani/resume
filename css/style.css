@@ -18,6 +18,7 @@
 /* || @media RULES */
 
 @media screen and (max-width: 480px) {
+
     /* CSS for small width screens */
     .layout {
         width: auto !important;
@@ -40,6 +41,7 @@
 }
 
 @media screen and (max-width: 800px) {
+
     /* CSS for medium width screens */
     .layout {
         width: auto !important;
@@ -62,6 +64,7 @@
 }
 
 @media screen and (max-width: 1100px) {
+
     /* CSS for wide screens */
     .layout {
         width: auto !important;
@@ -70,13 +73,13 @@
 }
 
 @media print {
+
     body,
     html {
         background-color: white !important;
         margin: 0 !important;
         padding: 0 !important;
         box-shadow: none !important;
-        font-size: 40% !important;
     }
 
     .layout {
@@ -95,7 +98,8 @@
 
     .certificates-container {
         height: auto;
-        overflow: visible; /* Ensure overflow is visible for printing */
+        overflow: visible !important;
+        /* Ensure overflow is visible for printing */
         scrollbar-width: none;
         -ms-overflow-style: none;
     }
@@ -106,6 +110,46 @@
 
     .certificates-container::-webkit-scrollbar {
         display: none;
+    }
+
+    h1 {
+        font-size: 15px !important;
+    }
+
+    h2 {
+        font-size: 14px !important;
+    }
+
+    h3 {
+        font-size: 11px !important;
+    }
+
+    p {
+        font-size: 11px !important;
+    }
+
+    .name {
+        font-size: 36px !important;
+    }
+
+    .profession {
+        font-size: 20px !important;
+    }
+
+    #summary .text {
+        width: 110% !important;
+    }
+
+    .text {
+        font-size: 11px !important;
+    }
+
+    .grid-item {
+        font-size: 11px !important;
+    }
+
+    .certificate-title {
+        font-size: 11px !important;
     }
 
     @page {
@@ -147,7 +191,7 @@ body {
 section {
     margin-bottom: 1rem;
     padding: 0 0.5rem;
-}    
+}
 
 h1 {
     margin: 0;
@@ -159,28 +203,28 @@ h1 {
     z-index: 10;
     display: block;
     width: 100%;
-}    
+}
 
 h2 {
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.5;
     margin: 0;
-}    
+}
 
 h3 {
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.16;
     margin: 0;
-}    
+}
 
 p {
     font-size: 1.35rem;
     line-height: 1.16;
     font-weight: 400;
     margin: 0;
-}    
+}
 
 ul {
     width: 100%;
@@ -412,6 +456,7 @@ i.fa-circle {
 .timeline-item {
     position: relative;
     padding-bottom: 0.4rem;
+
     &:before {
         content: '';
         position: absolute;
@@ -543,17 +588,17 @@ i.fa-circle {
     height: 34px;
     bottom: 70px;
     right: 20px;
-  }
-  
-  /* Hide default HTML checkbox */
-  .switch input {
+}
+
+/* Hide default HTML checkbox */
+.switch input {
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  /* The slider */
-  .slider {
+}
+
+/* The slider */
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -563,9 +608,9 @@ i.fa-circle {
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  .slider:before {
+}
+
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -575,27 +620,27 @@ i.fa-circle {
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-  }
-  
-  input:checked + .slider {
+}
+
+input:checked+.slider {
     background-color: var(--base-color);
-  }
-  
-  input:focus + .slider {
+}
+
+input:focus+.slider {
     box-shadow: 0 0 1px var(--base-color);
-  }
-  
-  input:checked + .slider:before {
+}
+
+input:checked+.slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
+}
+
+/* Rounded sliders */
+.slider.round {
     border-radius: 34px;
-  }
-  
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
+}

@@ -152,6 +152,10 @@
         font-size: 11px !important;
     }
 
+    #languages h1 {
+        padding-top: 1.5rem;
+    }
+
     @page {
         margin: 1cm;
         size: A4 portrait;
